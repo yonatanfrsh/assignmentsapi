@@ -22,7 +22,7 @@ builder.Services.AddCors(options => options.AddPolicy("EnableCORS", builder =>
     .AllowAnyHeader()
     .AllowAnyMethod()
     .Build();
-}));
+})); 
 
 var app = builder.Build();
 
