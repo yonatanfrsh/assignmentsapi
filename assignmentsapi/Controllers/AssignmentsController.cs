@@ -66,7 +66,7 @@ namespace assignmentsapi.Controllers
         {
             var result = await _assignmentService.DeleteMultipleAssignmentsAsync(assignmentsMV);
 
-            return Ok(result);
+            return Ok(result); 
         }
 
         [HttpPost("ArchiveMultipleAssignmentsAsync")]
