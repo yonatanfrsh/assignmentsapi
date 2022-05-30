@@ -24,5 +24,6 @@ namespace DataAccess.Entities
         [MaxLength(400)]
         public string? Description { get; set; }
         public bool Archive { get; set; }
+        public string Location { get; set; }
     }
 }

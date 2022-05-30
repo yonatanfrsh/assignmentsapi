@@ -51,7 +51,8 @@ namespace DataAccess
                 EndDate = assignment.EndDate,
                 Ended = assignment.Ended,
                 Description = assignment.Description,
-                Archive = archive
+                Archive = archive,
+                Location = "Israel"
             };
 
             Context.Add(assignmentE);
@@ -126,7 +127,7 @@ namespace DataAccess
             return assignmentsMV;
         }
 
-        public async Task<IEnumerable<AssignmentModelView>> GetAssignmentsAsync(bool withArchive)
+        public async Task<IEnumerable<AssignmentModelView>> GetAssignmentsAsync(bool withArchive, int page)
         {
             //var x = await Context.AssignmentTypes.FirstOrDefaultAsync();
 

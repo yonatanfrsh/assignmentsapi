@@ -19,10 +19,11 @@ namespace DataAccess
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+
             while (!stoppingToken.IsCancellationRequested)
             {
                await CallAssignmentService();
-                await Task.Delay(TimeSpan.FromMinutes(10));
+                await Task.Delay(TimeSpan.FromMinutes(1));
             }
         }
 

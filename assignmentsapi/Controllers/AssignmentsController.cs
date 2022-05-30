@@ -36,10 +36,10 @@ namespace assignmentsapi.Controllers
             return Ok(assignment);
         }
 
-        [HttpGet("GetAssignmentsAsync/{withArchive}")]
-        public async Task<ActionResult<List<AssignmentModelView>>> GetAssignmentsAsync(bool withArchive)
+        [HttpGet("GetAssignmentsAsync/{withArchive}/{page}")]
+        public async Task<ActionResult<List<AssignmentModelView>>> GetAssignmentsAsync(bool withArchive, int page)
         {
-            var result = await _assignmentService.GetAssignmentsAsync(withArchive);
+            var result = await _assignmentService.GetAssignmentsAsync(withArchive, page);
 
             return Ok(result);
 
