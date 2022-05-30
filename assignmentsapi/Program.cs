@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection").ToString();
-builder.Services.AddDbContext<DataAccess.AssignmentContext>(options => options.UseSqlServer(connectionString)); //.LogTo(Console.WriteLine));
+builder.Services.AddDbContext<DataAccess.AssignmentContext>(options => options.UseSqlServer(connectionString).LogTo(Console.WriteLine));
 
 builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 builder.Services.AddScoped<IAssignmentTypeService, AssignmentTypeService>();
